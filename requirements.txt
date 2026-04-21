@@ -1,0 +1,6 @@
+ucimlrepo==0.0.3
+pandas
+scikit-learn
+xgboost
+streamlit
+plotly

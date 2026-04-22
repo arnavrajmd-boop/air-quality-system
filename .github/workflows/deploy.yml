@@ -27,9 +27,9 @@ jobs:
     - name: Deploy to Elastic Beanstalk
       uses: einaregilsson/beanstalk-deploy@v21
       with:
-        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        application_name: air-quality-system # Make sure this matches your AWS app name
+        aws_access_key: ${{ secrets.AKIA2GB7W3PUROAWAORH }}
+        aws_secret_key: ${{ secrets.eKYw93GKKFPYU0s13P14FUtSDeChCAto95/2dtRY }}
+        application_name: AIR QUALITY SYSTEM # Make sure this matches your AWS app name
         environment_name: AIRQUALITYSYSTEM-env  # Make sure this matches your AWS env name
         version_label: "v-${{ github.sha }}-${{ github.run_number }}"
         region: us-east-1 # Change this if your AWS region is different

@@ -11,10 +11,10 @@ jobs:
     
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11'
 
@@ -31,6 +31,6 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: air-quality-system # Make sure this matches your AWS app name
         environment_name: AIRQUALITYSYSTEM-env  # Make sure this matches your AWS env name
-        version_label: "v-${{ github.sha }}"
+        version_label: "v-${{ github.sha }}-${{ github.run_number }}"
         region: us-east-1 # Change this if your AWS region is different
         deployment_package: deploy.zip
